@@ -178,8 +178,8 @@ streznik.get('/izpisiRacun/:oblika', function(zahteva, odgovor) {
        var podjetje= stranke[s].Company;
       
       
-      odgovor.setHeader('content-type', 'text/xml');
-      odgovor.render('eslog', {
+        odgovor.setHeader('content-type', 'text/xml');
+        odgovor.render('eslog', {
         vizualiziraj: zahteva.params.oblika == 'html' ? true : false,
         postavkeRacuna: pesmi,
         NazivPartnerja1: narocnik_ime,
@@ -191,7 +191,7 @@ streznik.get('/izpisiRacun/:oblika', function(zahteva, odgovor) {
         Phone: phone,
         Fax: fax,
         Email: email
-      })
+        })
       })  
     }
   })
